@@ -1,0 +1,18 @@
+---
+header:
+  version: 11
+machine: qemux86-64
+distro: poky-tiny
+target: core-image-minimal
+repos:
+  poky:
+    url: "https://git.yoctoproject.org/git/poky"
+    refspec: "kirkstone"
+    layers:
+      meta:
+      meta-poky:
+      meta-yocto-bsp:
+  meta-training:
+local_conf_header:
+  meta-training: |
+    DISTRO = "training"
