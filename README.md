@@ -6,13 +6,21 @@ hopefully small poky-tiny image built with kas
 
 ```sh
 # clone kas
+# on same level where yocto-training-kas originates
 git clone https://github.com/siemens/kas
 
+
+
 # run bitbake shell
+# from inside yocto-training-kas
 ~/path/to/kas/kas-container shell
 
 # build image
 ~/path/to/kas/kas-container build
+
+# build only entr recipe
+~/path/to/kas/kas-container shell
+builder@aa2c6b960dda:/build$ bitbake -c build entr
 ```
 
  - also use `.../kas-container help`
