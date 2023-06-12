@@ -26,3 +26,16 @@ builder@aa2c6b960dda:/build$ bitbake -c build entr
  - also use `.../kas-container help`
  - the config is in `.config.yaml` by default, i guess we can move it if
    hidden file is too implicit
+```
+
+# run qemu on image
+
+```
+# in kas-container shell
+runqemu slirp nographic serialstdio
+```
+
+Login with user `root`, no password.
+
+To exit the qemu process, use Ctrl+a x.
+
