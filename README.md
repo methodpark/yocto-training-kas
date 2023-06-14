@@ -5,6 +5,9 @@ hopefully small poky-tiny image built with kas
 ## usage
 
 ```sh
+# clone this repository
+git clone https://code.methodpark.de/mp-eng/yocto-training-kas.git
+
 # clone kas
 # on same level where yocto-training-kas originates
 git clone https://github.com/siemens/kas
@@ -13,6 +16,7 @@ git clone https://github.com/siemens/kas
 
 # run bitbake shell
 # from inside yocto-training-kas
+cd yocto-kas-container
 ~/path/to/kas/kas-container shell
 
 # build image
@@ -20,13 +24,13 @@ git clone https://github.com/siemens/kas
 
 # build only entr recipe
 ~/path/to/kas/kas-container shell
-builder@aa2c6b960dda:/build$ bitbake -c build entr
+builder@aa2c6b960dda:/build$ bitbake entr
 ```
 
  - also use `.../kas-container help`
  - the config is in `.config.yaml` by default, i guess we can move it if
    hidden file is too implicit
-```
+
 
 # run qemu on image
 
