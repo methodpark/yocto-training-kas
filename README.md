@@ -14,13 +14,13 @@ user@machine:~$ git clone https://github.com/siemens/kas
 # run bitbake shell
 # from inside yocto-training-kas
 cd yocto-training-kas
-user@machine:~$  ../kas/kas-container shell
+user@machine:~/yocto-training-kas$  ../kas/kas-container shell
 
 # build image
-user@machine:~$ ../kas/kas-container build
+user@machine:~/yocto-training-kas$ ../kas/kas-container build
 
 # build only entr recipe
-user@machine:~$ ../kas/kas-container shell
+user@machine:~/yocto-training-kas$ ../kas/kas-container shell
 builder@aa2c6b960dda:/build$ bitbake entr
 ```
 
