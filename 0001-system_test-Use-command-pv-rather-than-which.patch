@@ -1,0 +1,25 @@
+From 7c90d522e082451385f845f108c8bf58e872872a Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Petr=20Van=C4=9Bk?= <arkamar@atlas.cz>
+Date: Fri, 27 Jan 2023 14:48:36 +0100
+Subject: [PATCH] system_test: Use 'command -pv' rather than 'which'
+
+---
+ system_test.sh | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/system_test.sh b/system_test.sh
+index 2687bb3..dbec661 100755
+--- a/system_test.sh
++++ b/system_test.sh
+@@ -40,7 +40,7 @@ trap "$clear_tty; $clear_tmux; $clear_tmp" EXIT
+ 
+ utils="file pgrep git vim tmux"
+ for util in $utils; do
+-	p=$(which $util 2> /dev/null) || {
++	p=$(command -pv $util) || {
+ 		echo "ERROR: could not locate the '$util' utility" >&2
+ 		echo "System tests depend on the following: $utils" >&2
+ 		exit 1
+-- 
+2.25.1
+
