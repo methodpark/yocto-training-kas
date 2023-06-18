@@ -6,6 +6,8 @@ LIC_FILES_CHKSUM = "file://LICENSE;md5=9ddb37016e12a99202e14ddb69593155"
 
 FILESEXTRAPATHS:prepend := "${THISDIR}/patches/:"
 
+inherit upload
+
 SRC_URI += "\
     git://github.com/eradman/entr.git;branch=master;rev=${SRCREV};protocol=https \
     file://0001-system_test-Use-command-pv-rather-than-which.patch \
