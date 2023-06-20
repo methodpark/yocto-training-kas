@@ -17,17 +17,14 @@ SRCREV = "ced4b72c9b78522113a23b0426f20877af358c62"
 S = "${WORKDIR}/git"
 
 do_configure() {
-    cd "${S}"
     ./configure
 }
 
 do_compile() {
-    cd "${S}"
     make
 }
 
 do_install() {
-    cd "${S}"
     make DESTDIR=${D} PREFIX=/usr install
 }
 
