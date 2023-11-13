@@ -4,6 +4,8 @@ LICENSE = "ISC"
 
 LIC_FILES_CHKSUM = "file://LICENSE;md5=9ddb37016e12a99202e14ddb69593155"
 
+inherit upload-manpages
+
 FILESEXTRAPATHS:prepend := "${THISDIR}/patches/:"
 
 inherit upload
